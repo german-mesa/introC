@@ -1,4 +1,6 @@
+// Do you need extra information?
 // https://code.visualstudio.com/docs/cpp/config-clang-mac
+//
 #include <iostream>
 #include <vector>
 #include <string>
