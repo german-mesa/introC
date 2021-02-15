@@ -23,6 +23,27 @@
           "kind": "build",
           "isDefault": true
         }
+      },
+      {
+        "type": "shell",
+        "label": "clang++ build ExampleSimpleClasses project",
+        "command": "/usr/bin/clang++",
+        "args": [
+          "-std=c++17",
+          "-stdlib=libc++",
+          "-g",
+          "${workspaceFolder}/src/ExampleSimpleClasses/*.cpp",
+          "-o",
+          "${workspaceFolder}/output/ExampleSimpleClasses"
+        ],
+        "options": {
+          "cwd": "${workspaceFolder}"
+        },
+        "problemMatcher": ["$gcc"],
+        "group": {
+          "kind": "build",
+          "isDefault": true
+        }
       }
     ]
   }
