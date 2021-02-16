@@ -25,13 +25,15 @@ vector<string> Account::getReport()
 
 bool Account::postDeposit(int amount)
 {
+    int const depositCharge = 1;
+
     if (amount <= 0)
     {
         return false;
     }
 
     balance += amount;
-    balance -= 1;
+    balance -= depositCharge;
 
     log.push_back(Transaction{ amount, "Deposit"});
     log.push_back(Transaction{ 1, "Service Charge"});
@@ -40,15 +42,17 @@ bool Account::postDeposit(int amount)
 
 bool Account::postWithraw(int amount)
 {
+    int const withdrawCharge = 1;
+
     if (amount <= 0)
     {
         return false;
     }
 
-    if ((balance + limit) >= amount + 1)
+    if ((balance + limit) >= amount + withdrawCharge)
     {
         balance -= amount;
-        balance -= 1;
+        balance -= withdrawCharge;
 
         log.push_back(Transaction{ amount, "Withdraw"});
         log.push_back(Transaction{ 1, "Service Charge"});
