@@ -1,5 +1,3 @@
-#pragma once
-
 #include <vector>
 using std::vector;
 
@@ -21,7 +19,7 @@ class Account
         bool postDeposit(int amount);
         bool postWithraw(int amount);
 
-        int getBalance() {return balance; }
+        int getBalance() const {return balance; }
 
-        vector<string> getReport();
+        vector<string> getReport() const;
 };

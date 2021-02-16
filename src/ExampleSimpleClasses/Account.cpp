@@ -6,7 +6,7 @@ using std::to_string;
 
 Account::Account(): balance(0), limit(100) {}
 
-vector<string> Account::getReport()
+vector<string> Account::getReport() const
 {
     vector<string> report;
 
