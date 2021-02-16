@@ -1,8 +1,10 @@
-#include <vector>
-#include <string>
+#pragma once
 
-using std::string;
+#include <vector>
 using std::vector;
+
+#include <string>
+using std::string;
 
 #include "Transaction.h"
 
