@@ -16,6 +16,19 @@
         "externalConsole": false,
         "MIMode": "lldb",
         "preLaunchTask": "clang++ build active file"
+      },
+      {
+        "name": "clang++ - Build and debug active project",
+        "type": "cppdbg",
+        "request": "launch",
+        "program": "${workspaceFolder}/output/${fileBasenameNoExtension}",
+        "args": [],
+        "stopAtEntry": true,
+        "cwd": "${workspaceFolder}",
+        "environment": [],
+        "externalConsole": false,
+        "MIMode": "lldb",
+        "preLaunchTask": "clang++ build active project"
       }
     ]
   }
