@@ -2,8 +2,9 @@
 using std::cout;
 using std::endl;
 
-// #include "Person.h"
+#include "Person.h"
 #include "Tweeter.h"
+#include "Status.h"
 
 int main()
 {
@@ -16,5 +17,11 @@ int main()
         cout << oTweeter.getName() << endl;
     }
 
+    FileError file = FileError::notfound;
+    file = FileError::ok;
+
+    Status status = Pending;
+    status = Approved;
+    
     return 0;
 }
