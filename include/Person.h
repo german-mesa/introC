@@ -1,15 +1,16 @@
 #include <string>
-using std::string;
 
 class Person
 {
     private:
-        string firstName;
-        string lastName;
+        std::string firstName;
+        std::string lastName;
         int arbitraryNumber;
 
     public:
-        Person(string first, string last, int arbitraryNumber);
-        string getName();
+        Person()=default;
+        ~Person();
+        Person(std::string first, std::string last, int arbitraryNumber);
+        std::string getName();
 
 };

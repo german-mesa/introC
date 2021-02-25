@@ -1,14 +1,19 @@
+#include <iostream>
 #include <string>
-using std::string;
 
 #include "Person.h"
 
-Person::Person(string first, string last, int arbitrary) : firstName(first), lastName(last), arbitraryNumber(arbitrary)
+Person::Person(std::string first, std::string last, int arbitrary) : firstName(first), lastName(last), arbitraryNumber(arbitrary)
 {
-
+    std::cout << "Constructing Person" << std::endl;
 }
 
-string Person::getName()
+Person::~Person()
+{
+    std::cout << "Destructing Person" << std::endl;
+}
+
+std::string Person::getName()
 {
     return firstName + " " + lastName;
 }
