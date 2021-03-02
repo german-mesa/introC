@@ -12,6 +12,10 @@ class Person
         Person()=default;
         ~Person();
         Person(std::string first, std::string last, int arbitraryNumber);
-        std::string getName();
+        
+        std::string getName() const;
+        
+        int getNumber() const {return arbitraryNumber;};
+        void setNumber(int number) { arbitraryNumber = number;};
 
 };
