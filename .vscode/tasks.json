@@ -30,32 +30,6 @@
       },
       {
         "type": "shell",
-        "label": "clang++ build ExampleSimpleClasses project",
-        "command": "/usr/bin/clang++",
-        "args": [
-          "-std=c++17",
-          "-stdlib=libc++",
-          "-g",
-          "${workspaceFolder}/src/ExampleSimpleClasses/*.cpp",
-          "-I",
-          "${workspaceFolder}/include",
-          "-o",
-          "${workspaceFolder}/output/ExampleSimpleClasses",
-          "-Wall"
-        ],
-        "options": {
-          "cwd": "${workspaceFolder}"
-        },
-        "problemMatcher": [
-          "$gcc"
-        ],
-        "group": {
-          "kind": "build",
-          "isDefault": true
-        }
-      },
-      {
-        "type": "shell",
         "label": "clang++ build active project",
         "command": "/usr/bin/clang++",
         "args": [
@@ -66,8 +40,7 @@
           "-I",
           "${workspaceFolder}/include",
           "-o",
-          "${workspaceFolder}/output/${fileBasenameNoExtension}",
-          "-Wall"
+          "${workspaceFolder}/output/${fileBasenameNoExtension}"
         ],
         "options": {
           "cwd": "${workspaceFolder}"
