@@ -12,6 +12,7 @@ using std::endl;
 
 int main()
 {
+    // Template class
     Accumulator integers(0);
 
     integers += 3;
@@ -24,5 +25,16 @@ int main()
     strings += " World!";
     cout << strings.getTotal() << endl;
     
+
+    // Template specialization
+    Accumulator<Person> people(0);
+
+    Person oPerson1("German", "Mesa", 123);
+    Person oPerson2("Someone", "Else", 456);
+
+    people += oPerson1;
+    people += oPerson2;
+    cout << people.getTotal() << endl;
+
     return 0;
 }

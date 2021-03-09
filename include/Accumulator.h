@@ -1,3 +1,6 @@
+#include "Person.h"
+
+// Template class
 template <class T>
 class Accumulator
 {
@@ -13,3 +16,17 @@ public:
 };
 
 
+// Template specialization
+template <>
+class Accumulator<Person>
+{
+private:
+    int total;
+
+public:
+    Accumulator(int start): total(start) {};
+
+    int operator+=(Person const& t){ return total = total + t.getNumber(); };
+    
+    int getTotal() const {return total; }
+};
