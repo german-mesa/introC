@@ -11,4 +11,6 @@ class Tweeter : public Person
     public:
         Tweeter(std::string first, std::string last, int arbitraryNumber, std::string handle);
         ~Tweeter();
+
+        std::string getName() const;
 };
